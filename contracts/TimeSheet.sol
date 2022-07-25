@@ -21,13 +21,13 @@ contract TimeSheet{
     mapping(uint=>CheckInStudent) public checkInLists;
     mapping(uint=>CheckOutStudent) public checkOutLists;
 
-    function checkIn(string memory _time,string memory _firstName, string memory _lastName){
+    function checkIn(uint _id,string memory _time,string memory _firstName, string memory _lastName){
         countCheckIn+=1;
-        checkInLists[countCheckIn]=CheckInStudent(countCheckIn,_firstName,_lastName,true,_time);
+        checkInLists[countCheckIn]=CheckInStudent(_id,_firstName,_lastName,true,_time);
     }
-     function checkOut(string memory _time,string memory _firstName, string memory _lastName){
+     function checkOut(uint _id,string memory _time,string memory _firstName, string memory _lastName){
         countCheckOut+=1;
-        checkOutLists[countCheckOut]=CheckOutStudent(countCheckOut,_firstName,_lastName,true,_time);
+        checkOutLists[countCheckOut]=CheckOutStudent(_id,_firstName,_lastName,true,_time);
     }
 
 }

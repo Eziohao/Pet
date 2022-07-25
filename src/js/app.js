@@ -69,51 +69,80 @@ App = {
   bindEvents: function () {
     $(document).on("click", ".btn-adopt", App.handleAdopt);
   },
+  handleCheckIn:function(event){
+      event.preventDefault();
 
-  markAdopted: function () {
-    var adoptionInstance;
-
-    App.contracts.Adoption.deployed().then(function(instance) {
-      adoptionInstance = instance;
-    
-      return adoptionInstance.getAdopters.call();
-    }).then(function(adopters) {
-      for (i = 0; i < adopters.length; i++) {
-        if (adopters[i] !== '0x0000000000000000000000000000000000000000') {
-          $('.panel-pet').eq(i).find('button').text('Success').attr('disabled', true);
+      var studentId = parseInt($(event.target).data("id"));
+      var today = new Date();
+      var dd = String(today.getDate()).padStart(2, '0');
+      var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+      var yyyy = today.getFullYear();
+      today = mm + '/' + dd + '/' + yyyy;
+      var checkInInstance;
+  
+      web3.eth.getAccounts(function(error, accounts) {
+        if (error) {
+          console.log(error);
         }
-      }
-    }).catch(function(err) {
-      console.log(err.message);
-    });
-  },
-
-  handleAdopt: function (event) {
-    event.preventDefault();
-
-    var petId = parseInt($(event.target).data("id"));
-
-    var adoptionInstance;
-
-    web3.eth.getAccounts(function(error, accounts) {
-      if (error) {
-        console.log(error);
-      }
-    
-      var account = accounts[0];
-    
-      App.contracts.Adoption.deployed().then(function(instance) {
-        adoptionInstance = instance;
-    
-        // Execute adopt as a transaction by sending account
-        return adoptionInstance.adopt(petId, {from: account});
-      }).then(function(result) {
-        return App.markAdopted();
-      }).catch(function(err) {
-        console.log(err.message);
+      
+        var account = accounts[0];
+      
+        App.contracts.TimeSheet.deployed().then(function(instance) {
+          timeSheetInstance = instance;
+      
+          // Execute checkin as a transaction by sending account
+          return timeSheetInstance.checkIn(studentId,today, {from: account});
+        }).then(function(result) {
+          return App.markAdopted();
+        }).catch(function(err) {
+          console.log(err.message);
+        });
       });
-    });
-  },
+  }
+  // markAdopted: function () {
+  //   var adoptionInstance;
+
+  //   App.contracts.Adoption.deployed().then(function(instance) {
+  //     adoptionInstance = instance;
+    
+  //     return adoptionInstance.getAdopters.call();
+  //   }).then(function(adopters) {
+  //     for (i = 0; i < adopters.length; i++) {
+  //       if (adopters[i] !== '0x0000000000000000000000000000000000000000') {
+  //         $('.panel-pet').eq(i).find('button').text('Success').attr('disabled', true);
+  //       }
+  //     }
+  //   }).catch(function(err) {
+  //     console.log(err.message);
+  //   });
+  // },
+
+  // handleAdopt: function (event) {
+  //   event.preventDefault();
+
+  //   var petId = parseInt($(event.target).data("id"));
+
+  //   var adoptionInstance;
+
+  //   web3.eth.getAccounts(function(error, accounts) {
+  //     if (error) {
+  //       console.log(error);
+  //     }
+    
+  //     var account = accounts[0];
+    
+  //     App.contracts.Adoption.deployed().then(function(instance) {
+  //       adoptionInstance = instance;
+    
+  //       // Execute adopt as a transaction by sending account
+  //       return adoptionInstance.adopt(petId, {from: account});
+  //     }).then(function(result) {
+  //       return App.markAdopted();
+  //     }).catch(function(err) {
+  //       console.log(err.message);
+  //     });
+  //   });
+  // },
 };
 
 $(function() {
