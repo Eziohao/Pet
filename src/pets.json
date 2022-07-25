@@ -1,98 +1,130 @@
 [
   {
     "id": 0,
-    "name": "Alice",
-    "studentid": "OAKWTLZTMWTIH",
-    "schoolOfOrigin": "Oakland University"
+    "name": "Frieda",
+    "picture": "images/scottish-terrier.jpeg",
+    "age": 3,
+    "breed": "Scottish Terrier",
+    "location": "Lisco, Alabama"
   },
   {
     "id": 1,
-    "name": "Bob",
-    "studentid": "OAK8ZIX6G3F58",
-    "schoolOfOrigin": "Oakland University"
+    "name": "Gina",
+    "picture": "images/scottish-terrier.jpeg",
+    "age": 3,
+    "breed": "Scottish Terrier",
+    "location": "Tooleville, West Virginia"
   },
   {
     "id": 2,
-    "name": "Charley",
-    "studentid": "OAKQIGCPN2HY3",
-    "schoolOfOrigin": "Oakland University"
+    "name": "Collins",
+    "picture": "images/french-bulldog.jpeg",
+    "age": 2,
+    "breed": "French Bulldog",
+    "location": "Freeburn, Idaho"
   },
   {
     "id": 3,
-    "name": "David",
-    "studentid": "OAK08AKZ07EAU",
-    "schoolOfOrigin": "Oakland University"
+    "name": "Melissa",
+    "picture": "images/boxer.jpeg",
+    "age": 2,
+    "breed": "Boxer",
+    "location": "Camas, Pennsylvania"
   },
   {
     "id": 4,
-    "name": "Eve",
-    "studentid": "OAK5IW96YKQRQ",
-    "schoolOfOrigin": "Oakland University"
+    "name": "Jeanine",
+    "picture": "images/french-bulldog.jpeg",
+    "age": 2,
+    "breed": "French Bulldog",
+    "location": "Gerber, South Dakota"
   },
   {
     "id": 5,
-    "name": "Frank",
-    "studentid": "OAKTJEJ4DCNQS",
-    "schoolOfOrigin": "Oakland University"
+    "name": "Elvia",
+    "picture": "images/french-bulldog.jpeg",
+    "age": 3,
+    "breed": "French Bulldog",
+    "location": "Innsbrook, Illinois"
   },
   {
     "id": 6,
-    "name": "Grace",
-    "studentid": "OAKM3E9YLN1LO",
-    "schoolOfOrigin": "Oakland University"
+    "name": "Latisha",
+    "picture": "images/golden-retriever.jpeg",
+    "age": 3,
+    "breed": "Golden Retriever",
+    "location": "Soudan, Louisiana"
   },
   {
     "id": 7,
-    "name": "Heidi",
-    "studentid": "OAKY5JTKAT98R",
-    "schoolOfOrigin": "Oakland University"
+    "name": "Coleman",
+    "picture": "images/golden-retriever.jpeg",
+    "age": 3,
+    "breed": "Golden Retriever",
+    "location": "Jacksonwald, Palau"
   },
   {
     "id": 8,
-    "name": "Ivan",
-    "studentid": "OAKERHK2KSN0Y",
-    "schoolOfOrigin": "Oakland University"
+    "name": "Nichole",
+    "picture": "images/french-bulldog.jpeg",
+    "age": 2,
+    "breed": "French Bulldog",
+    "location": "Honolulu, Hawaii"
   },
   {
     "id": 9,
-    "name": "Judy",
-    "studentid": "OAKETA42AMWB2",
-    "schoolOfOrigin": "Oakland University"
+    "name": "Fran",
+    "picture": "images/boxer.jpeg",
+    "age": 3,
+    "breed": "Boxer",
+    "location": "Matheny, Utah"
   },
   {
     "id": 10,
-    "name": "Mallory",
-    "studentid": "OAK9PL67U8BHA",
-    "schoolOfOrigin": "Oakland University"
+    "name": "Leonor",
+    "picture": "images/boxer.jpeg",
+    "age": 2,
+    "breed": "Boxer",
+    "location": "Tyhee, Indiana"
   },
   {
     "id": 11,
-    "name": "Niaj",
-    "studentid": "OAKW2214LPUFO",
-    "schoolOfOrigin": "Oakland University"
+    "name": "Dean",
+    "picture": "images/scottish-terrier.jpeg",
+    "age": 3,
+    "breed": "Scottish Terrier",
+    "location": "Windsor, Montana"
   },
   {
     "id": 12,
-    "name": "Olivia",
-    "studentid": "OAKOZ13YFPK9X",
-    "schoolOfOrigin": "Oakland University"
+    "name": "Stevenson",
+    "picture": "images/french-bulldog.jpeg",
+    "age": 3,
+    "breed": "French Bulldog",
+    "location": "Kingstowne, Nevada"
   },
   {
     "id": 13,
-    "name": "Pat",
-    "studentid": "OAKYDWZ97V4MM",
-    "schoolOfOrigin": "Oakland University"
+    "name": "Kristina",
+    "picture": "images/golden-retriever.jpeg",
+    "age": 4,
+    "breed": "Golden Retriever",
+    "location": "Sultana, Massachusetts"
   },
   {
     "id": 14,
-    "name": "Rupert",
-    "studentid": "OAK5BJ3G2JVDV",
-    "schoolOfOrigin": "Oakland University"
+    "name": "Ethel",
+    "picture": "images/golden-retriever.jpeg",
+    "age": 2,
+    "breed": "Golden Retriever",
+    "location": "Broadlands, Oregon"
   },
   {
     "id": 15,
-    "name": "Sybil",
-    "studentid": "OAKOKXL1QX1Z7",
-    "schoolOfOrigin": "Oakland University"
+    "name": "Terry",
+    "picture": "images/golden-retriever.jpeg",
+    "age": 2,
+    "breed": "Golden Retriever",
+    "location": "Dawn, Wisconsin"
   }
 ]
