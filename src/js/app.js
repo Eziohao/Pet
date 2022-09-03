@@ -51,13 +51,13 @@ App = {
   },
 
   initContract: function () {
-    $.getJSON('Adoption.json', function(data) {
+    $.getJSON('TimeSheet.json', function(data) {
       // Get the necessary contract artifact file and instantiate it with @truffle/contract
-      var AdoptionArtifact = data;
-      App.contracts.Adoption = TruffleContract(AdoptionArtifact);
+      var TimeSheetArtifact = data;
+      App.contracts.TimeSheet = TruffleContract(TimeSheetArtifact);
     
       // Set the provider for our contract
-      App.contracts.Adoption.setProvider(App.web3Provider);
+      App.contracts.TimeSheet.setProvider(App.web3Provider);
     
       // Use our contract to retrieve and mark the adopted pets
       return App.markAdopted();
@@ -67,12 +67,14 @@ App = {
   },
 
   bindEvents: function () {
-    $(document).on("click", ".btn-adopt", App.handleAdopt);
+    $(document).on("click", ".btn-checkIn", App.handleCheckIn);
   },
   handleCheckIn:function(event){
       event.preventDefault();
 
       var studentId = parseInt($(event.target).data("id"));
+      var lastName=$(event.target).data("lastName");
+      var firstName=$(event.target).data("firstName");
       var today = new Date();
       var dd = String(today.getDate()).padStart(2, '0');
       var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
@@ -91,7 +93,7 @@ App = {
           timeSheetInstance = instance;
       
           // Execute checkin as a transaction by sending account
-          return timeSheetInstance.checkIn(studentId,today, {from: account});
+          return timeSheetInstance.checkIn(studentId,today,firstName,lastName);
         }).then(function(result) {
           return App.markAdopted();
         }).catch(function(err) {
