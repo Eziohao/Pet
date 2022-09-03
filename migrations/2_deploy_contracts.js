@@ -1,5 +1,5 @@
-var Adoption = artifacts.require("Adoption");
+var TimeSheet = artifacts.require("TimeSheet");
 
 module.exports = function(deployer) {
-  deployer.deploy(Adoption);
+  deployer.deploy(TimeSheet);
 };
